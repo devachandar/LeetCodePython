@@ -13,8 +13,7 @@ class Solution:
                 current_target = nums[i] + nums[left] + nums[right]
                 if abs(current_target - (target)) < abs(closest_target -(target)):
                     closest_target = current_target
-                    # left+=1
-                    # right-=1
+                    
                 if current_target < target:
                     left+=1
                 else:
