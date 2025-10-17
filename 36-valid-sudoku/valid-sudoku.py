@@ -50,7 +50,6 @@ class Solution:
                 if row_key in seen or col_key in seen or box_key in seen:
                     return False
                 seen.update([row_key,col_key,box_key])
-                print("seen", seen)
         return True
 
         
