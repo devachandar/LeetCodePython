@@ -1,5 +1,9 @@
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
+        # nums = set(nums)
+        # return len(nums)
+
+
         n = len(nums)
         i=0
         while i<n-1:
