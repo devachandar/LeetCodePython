@@ -6,7 +6,6 @@ class Solution:
         rotated_nums = []
         if k > len(nums):
             k = k % len(nums)
-        print("d",k)
         for i in range(len(nums)-k,len(nums)):
             rotated_nums.append(nums[i])
         for i in range(len(nums)-k):
