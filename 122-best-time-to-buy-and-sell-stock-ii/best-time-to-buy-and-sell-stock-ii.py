@@ -8,13 +8,10 @@ class Solution:
             if prices[i] < prices[i-1]:
                 mp = prices[i]
                 profit_sum = profit_sum + max_profit
-                print(profit_sum,"sum")
                 max_profit = 0
 
             
             max_profit = max(max_profit,prices[i] - mp)
-            print(mp,"mp")
-            print(max_profit,"profit")
         
         profit_sum = profit_sum + max_profit
 
