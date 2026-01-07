@@ -6,8 +6,8 @@ class Solution:
                 freq[i] = 1
             else:
                 freq[i]+=1
-        temp = min(freq['b'],freq['a'],freq['n'])
-        if (freq['l'] >= temp * 2 and freq['o'] >= temp * 2):
-            return temp
-        else:
-            return min(int(freq['l'] / 2), int(freq['o'] / 2))
+        return min(freq['b'],freq['a'],int(freq['l'] / 2),int(freq['o'] / 2),freq['n'])
+        # if (freq['l'] >= temp * 2 and freq['o'] >= temp * 2):
+        #     return temp
+        # else:
+        #     return min(int(freq['l'] / 2), int(freq['o'] / 2))
