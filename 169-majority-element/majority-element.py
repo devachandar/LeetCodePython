@@ -1,6 +1,9 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-    
+        
+        nums.sort() 
+        return nums[len(nums)//2]
+
         # count = 0
         # candidate = None
 
@@ -11,21 +14,21 @@ class Solution:
 
         # return candidate
 
-        count = 0
-        majority_count = 0
-        majority = 0
-        visited = []
-        for i in range(len(nums)):
-            count = 0
-            if nums[i] not in visited:
-                for j in range(len(nums)):
-                    if nums[j] == nums[i]:
-                        count+=1
-                visited.append(nums[i])
-            if count > majority_count:
-                majority_count = count
-                majority = nums[i]    
-        return majority
+        # count = 0
+        # majority_count = 0
+        # majority = 0
+        # visited = []
+        # for i in range(len(nums)):
+        #     count = 0
+        #     if nums[i] not in visited:
+        #         for j in range(len(nums)):
+        #             if nums[j] == nums[i]:
+        #                 count+=1
+        #         visited.append(nums[i])
+        #     if count > majority_count:
+        #         majority_count = count
+        #         majority = nums[i]    
+        # return majority
 
 
        
