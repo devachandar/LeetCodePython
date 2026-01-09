@@ -17,10 +17,12 @@ class Solution:
             freq[max_char] -= 1
 
         # Step 2: place remaining characters
+        # idx = 1
         for ch in freq:
             while freq[ch] > 0:
                 if idx >= n:
                     idx = 1
+                print(result)
                 result[idx] = ch
                 idx += 2
                 freq[ch] -= 1
