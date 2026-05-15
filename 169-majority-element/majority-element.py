@@ -1,8 +1,30 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         
-        nums.sort() 
-        return nums[len(nums)//2]
+        nums.sort()
+        count = 0
+        max_count = 0
+        candidate = nums[0]
+
+        for i in range(0,len(nums)-1):
+            if nums[i] != nums[i+1]:
+                if count > max_count:
+                    max_count = count
+                    candidate = nums[i]
+            
+                count = 0
+            else:
+                count+=1
+        if count > max_count:
+            print(candidate)
+            candidate = nums[i]
+        return candidate
+
+# class Solution:
+#     def majorityElement(self, nums: List[int]) -> int:
+        
+#         nums.sort() 
+#         return nums[len(nums)//2]
 
         # count = 0
         # candidate = None
