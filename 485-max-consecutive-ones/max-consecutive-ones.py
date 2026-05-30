@@ -3,6 +3,8 @@ class Solution:
         max_count = 0
         sub_count = 0
         
+        if 1 not in nums:
+            return 0
 
         for num in nums:
             if num == 1:
