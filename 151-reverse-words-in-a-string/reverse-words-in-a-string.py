@@ -2,9 +2,10 @@ class Solution:
     def reverseWords(self, s: str) -> str:
 
         words = s.split() # split words into string, remove extra spaces
+        print(words)
         reversed_words = words[::-1] # reverse the list of words
         return ' '.join(reversed_words) # join them back in space
-        
+
         # output = ''
         # s = s.strip()
         # right = len(s)
