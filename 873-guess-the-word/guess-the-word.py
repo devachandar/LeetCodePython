@@ -6,6 +6,7 @@
 #     def guess(self, word: str) -> int:
 
 class Solution:
+
     def findMatches(self, w1:str, w2:str):
         count = 0
         for i in range(6):
