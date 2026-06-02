@@ -1,9 +1,11 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        freq = Counter(nums)
 
-        for val in freq:
-            if freq[val] >1:
-                return True
+        return len(nums) != len(set(nums))
+        # freq = Counter(nums)
+
+        # for val in freq:
+        #     if freq[val] >1:
+        #         return True
             
-        return False
+        # return False
