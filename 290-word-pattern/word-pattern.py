@@ -9,7 +9,6 @@ class Solution:
         s_to_pattern = {}
 
         for i in range(len(pattern)):
-            print(pattern[i],pattern_to_s,s_to_pattern,list_s[i])
             if pattern[i] in pattern_to_s and pattern_to_s[pattern[i]] != list_s[i]:
                 return False
             
