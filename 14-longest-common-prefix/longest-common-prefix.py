@@ -1,5 +1,7 @@
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
+        
+           
         str1 = strs[0]
         for i in range(len(str1),-1,-1):
             sub_string = str1[:i]
