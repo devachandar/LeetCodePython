@@ -1,6 +1,28 @@
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
 
+        if len(nums) <= 0:
+            return 0
+
+        num_set = sorted(set(nums))
+
+        max_count = 1
+        count = 1
+        if len(num_set) == 1:
+            return 1
+        
+        # print(num_set)
+        for i in range(1,len(num_set)):
+            # print(num_set[i], num_set[i-1]-1)
+            if num_set[i]-1 == num_set[i-1]:
+                count+=1
+                max_count = max(max_count,count)
+            else:
+                count = 1
+
+        return max_count
+        
+
         # num_set = set(nums)
         # longest = 0
 
