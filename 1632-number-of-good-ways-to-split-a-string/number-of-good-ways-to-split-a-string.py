@@ -1,11 +1,12 @@
 class Solution:
     def numSplits(self, s: str) -> int:
 
+
         right = Counter(s)
         left = set()
         good_splits = 0
 
-        for ch in s[:-1]:  # last split is invalid
+        for ch in s[:-1]: 
             left.add(ch)
             right[ch] -= 1
             if right[ch] == 0:
