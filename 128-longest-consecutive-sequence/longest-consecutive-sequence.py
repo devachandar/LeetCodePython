@@ -11,9 +11,7 @@ class Solution:
         if len(num_set) == 1:
             return 1
         
-        # print(num_set)
         for i in range(1,len(num_set)):
-            # print(num_set[i], num_set[i-1]-1)
             if num_set[i]-1 == num_set[i-1]:
                 count+=1
                 max_count = max(max_count,count)
@@ -39,17 +37,17 @@ class Solution:
         #         longest = max(longest, length)
 
         # return longest
-        nums = set(nums)
-        max_count = 0
-        for num in nums:
-            if num-1 not in nums:
-                temp = num+1
-                count = 1
-                while temp in nums:
-                    count+=1
-                    temp+=1
-                max_count = max(max_count,count)
+        # nums = set(nums)
+        # max_count = 0
+        # for num in nums:
+        #     if num-1 not in nums:
+        #         temp = num+1
+        #         count = 1
+        #         while temp in nums:
+        #             count+=1
+        #             temp+=1
+        #         max_count = max(max_count,count)
         
-        return max_count
+        # return max_count
 
 
