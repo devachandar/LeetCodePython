@@ -5,28 +5,55 @@
 #         self.next = next
 class Solution:
     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        unique = set()
-        list_to_remove = set()
+        dummy = ListNode(0, head)
+        prev = dummy
 
-        curr = head
-        while curr:
-            
-            if curr.val in unique:
-                list_to_remove.add(curr.val)
-            unique.add(curr.val)
-            curr = curr.next
-
-        dummy = ListNode(0,head)
-
-        curr = dummy
-
-        while curr.next:
-            if curr.next.val in list_to_remove:
-                curr.next = curr.next.next
+        current = head
+        while current:
+            # Check if current starts a duplicate run
+            if current.next and current.val == current.next.val:
+                # Skip all nodes with this value
+                while current.next and current.val == current.next.val:
+                    current = current.next
+                # Wire prev to the node after the duplicate run
+                prev.next = current.next
             else:
-                curr = curr.next
+                # Current is unique, advance prev
+                prev = prev.next
+            current = current.next
 
         return dummy.next
+
+
+
+
+        # unique = set()
+        # list_to_remove = set()
+
+        # curr = head
+        # while curr:
+            
+        #     if curr.val in unique:
+        #         list_to_remove.add(curr.val)
+        #     unique.add(curr.val)
+        #     curr = curr.next
+
+        # dummy = ListNode(0,head)
+
+        # curr = dummy
+
+        # while curr.next:
+        #     if curr.next.val in list_to_remove:
+        #         curr.next = curr.next.next
+        #     else:
+        #         curr = curr.next
+
+        # return dummy.next
+
+
+
+
+
         # print(unique,list_to_remove)
 
         # unique = set()
