@@ -13,8 +13,9 @@ class Solution:
                 stack.append(int(op))
         
         # print(stack)
-        result = 0
-        for n in stack:
-            result += n
+        return sum(stack)
+        # result = 0
+        # for n in stack:
+        #     result += n
         
-        return result
+        # return result
