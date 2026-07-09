@@ -14,18 +14,21 @@ class Solution:
 
         while queue:
             len_queue = len(queue)
-            level = []
+            # level = []
 
-            for _ in range(len_queue):
+            for i in range(len_queue):
                 node = queue.popleft()
 
-                level.append(node.val)
+                # level.append(node.val)
+                if i == len_queue - 1:
+                    result.append(node.val)
+
                 if node.left:
                     queue.append(node.left)
                 if node.right:
                     queue.append(node.right)
                 
 
-            result.append(level.pop())
+            # result.append(level.pop())
 
         return result
