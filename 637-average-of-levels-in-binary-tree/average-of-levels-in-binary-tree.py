@@ -13,7 +13,7 @@ class Solution:
         while queue:
             len_queue = len(queue)
             sum_level = 0
-            count = 0
+            # count = 0
             for _ in range(len_queue):
                 node = queue.popleft()
                 sum_level += node.val
