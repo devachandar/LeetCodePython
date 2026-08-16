@@ -20,14 +20,14 @@ class Solution:
                 node = queue.popleft()
 
                 # level.append(node.val)
-                if i == len_queue - 1:
-                    result.append(node.val)
+                # if i == len_queue - 1:
+                #     result.append(node.val)
 
                 if node.left:
                     queue.append(node.left)
                 if node.right:
                     queue.append(node.right)
-                
+            result.append(node.val)    
 
             # result.append(level.pop())
 
